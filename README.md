@@ -12,8 +12,8 @@ I firmly believe in the power of collaboration, and I'm open to exciting busines
 
 Let's connect! Feel free to reach out to me for collaborations, project inquiries, or just a chat about our shared passions.
 
-- 🔭 I’m currently working on a personal push to my limits project to learn futher and go deeper!
-- 🌱 I’m currently learning about [T3 stack](https://github.com/t3-oss/create-t3-app) and [React Native](https://github.com/facebook/react-native) for mobile development.
+- 🔭 I’m currently working on a personal push to my limits project to learn futher and go deeper! Rust is way to go!
+- 🌱 I’m currently mastering in typescript and using it with node.js and learning [React Native](https://github.com/facebook/react-native) for mobile development.  
 - 💬 Ask me about anything related to web development, I love discussing about new ideas.
 - 📫 How to reach me: [LinkedIn](https://www.linkedin.com/in/ravenwits/) or [Email](mailto:hi@alpsariyer.dev)
 - ⚡ Fun fact: I've started learned coding at 28 and it became my whole life. I am late because of

@@ -27,35 +27,36 @@ Let's connect! Feel free to reach out to me for collaborations, project inquirie
 	<img width="32" src="https://cdn.simpleicons.org/javascript" alt="JavaScript" title="JavaScript"/>
 	<img width="32" src="https://cdn.simpleicons.org/typescript" alt="TypeScript" title="TypeScript"/>
   	<img width="32" src="https://cdn.simpleicons.org/php" alt="php" title="php"/>
-  	<img width="32" src="https://cdn.simpleicons.org/jquery" alt="jquery" title="jquery"/>
 	<img width="32" src="https://cdn.simpleicons.org/git" alt="Git" title="Git"/>
-	<img width="32" src="https://user-images.githubusercontent.com/25181517/121405384-444d7300-c95d-11eb-959f-913020d3bf90.png" alt="C#" title="C#"/>
 </div>
 <div>
   	<img width="32" src="https://cdn.simpleicons.org/react" alt="React" title="React"/>
   	<img width="32" src="https://cdn.simpleicons.org/nextdotjs" alt="NextJS" title="NextJS"/>
-  	<img width="32" src="https://cdn.simpleicons.org/trpc/2596BE" alt="trpc" title="trpc"/>
-  	<img width="32" src="https://cdn.simpleicons.org/googlecloud" alt="GCP" title="GCP"/>
+  	<img width="32" src="https://cdn.simpleicons.org/nestjs" alt="Nestjs" title="NestJS"/>
 	<img width="32" src="https://cdn.simpleicons.org/firebase" alt="Firebase" title="Firebase"/>
+	<img width="32" src="https://cdn.simpleicons.org/supabase" alt="Supabse" title="Supabase"/>
 	<img width="32" src="https://cdn.simpleicons.org/wordpress" alt="Wordpress" title="Wordpress"/>
+  	<img width="32" src="https://cdn.simpleicons.org/jquery" alt="jquery" title="jquery"/>
 </div>
 <div>
   	<img width="32" src="https://cdn.simpleicons.org/recoil" alt="Recoil" title="Recoil"/>
 	<img width="32" src="https://cdn.simpleicons.org/redux" alt="Redux" title="Redux"/>
 </div>
 <div>
+	<img width="32" src="https://cdn.simpleicons.org/graphql" alt="GraphQL" title="GraphQL"/>
   	<img width="32" src="https://cdn.simpleicons.org/prisma" alt="prisma" title="prisma"/>
+  	<img width="32" src="https://cdn.simpleicons.org/drizzle" alt="Drizzle" title="Drizzle"/>
   	<img width="32" src="https://cdn.simpleicons.org/arangodb" alt="ArangoDB" title="ArangoDB"/>
   	<img width="32" src="https://cdn.simpleicons.org/mongodb" alt="mongoDB" title="mongoDB"/>
-	<img width="32" src="https://cdn.simpleicons.org/mysql" alt="MySQL" title="MySQL"/>
 	<img width="32" src="https://cdn.simpleicons.org/postgresql" alt="PostgreSQL" title="PostgreSQL"/>
-	<img width="32" src="https://cdn.simpleicons.org/graphql" alt="GraphQL" title="GraphQL"/>
+	<img width="32" src="https://cdn.simpleicons.org/mysql" alt="MySQL" title="MySQL"/>
 </div>
 <div>
 	<img width="32" src="https://cdn.simpleicons.org/tsnode" alt="ts-node" title="ts node"/>
    	<img width="32" src="https://cdn.simpleicons.org/node.js" alt="Node.js" title="Node.js"/>
 	<img width="32" src="https://cdn.simpleicons.org/express" alt="Express" title="Express"/>
   	<img width="32" src="https://user-images.githubusercontent.com/25181517/192107858-fe19f043-c502-4009-8c47-476fc89718ad.png" alt="REST" title="REST"/>
+  	<img width="32" src="https://cdn.simpleicons.org/trpc/2596BE" alt="trpc" title="trpc"/>
   	<img width="32" src="https://cdn.simpleicons.org/axios/5A29E4" alt="axios" title="axios"/>
 	<img width="32" src="https://cdn.simpleicons.org/socket.io" alt="Socket IO" title="Socket IO"/>
 </div>
@@ -69,19 +70,21 @@ Let's connect! Feel free to reach out to me for collaborations, project inquirie
 </div>
 <div>	
   	<img width="32" src="https://cdn.simpleicons.org/openai" alt="openai" title="openai"/>
- 	<img width="32" src="https://cdn.simpleicons.org/unity" alt="Unity" title="Unity"/>
+  	<img width="32" src="https://cdn.simpleicons.org/postman" alt="postman" title="postman"/>
 	<img width="32" src="https://cdn.simpleicons.org/unrealengine" alt="Unreal Engine" title="Unreal Engine"/>
- 	<img width="32" src="https://cdn.simpleicons.org/adobephotoshop" alt="Photoshop" title="Photoshop"/>
-	<img width="32" src="https://cdn.simpleicons.org/adobeaftereffects" alt="After Effects" title="After Effects"/>
   	<img width="32" src="https://cdn.simpleicons.org/figma" alt="Figma" title="Figma"/>
   	<img width="32" src="https://cdn.simpleicons.org/neovim" alt="Neovim" title="Neovim"/>
- 	<img width="32" src="https://user-images.githubusercontent.com/25181517/192108891-d86b6220-e232-423a-bf5f-90903e6887c3.png" alt="Visual Studio Code" title="Visual Studio Code"/>
+  	<img width="32" src="https://cdn.simpleicons.org/googlecloud" alt="GCP" title="GCP"/>
 </div>
 <div>
   	<img width="32" src="https://cdn.simpleicons.org/github" alt="GitHub" title="GitHub"/>
 	<img width="32" src="https://cdn.simpleicons.org/gitlab" alt="GitLab" title="GitLab"/>
   	<img width="32" src="https://cdn.simpleicons.org/docker" alt="Docker" title="Docker"/>
 </div>
+<div>
+  	<img width="32" src="https://cdn.simpleicons.org/archlinux" alt="Arch" title="I use Arch btw :)"/>
+</div>
+
 
 
 ## Checkout

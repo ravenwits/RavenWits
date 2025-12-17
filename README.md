@@ -23,7 +23,7 @@ Let's connect! Feel free to reach out to me for collaborations, project inquirie
 ## Tech I Use
 <div>
 	<img width="32" src="https://cdn.simpleicons.org/html5" alt="HTML" title="HTML"/>
-	<img width="32" src="https://cdn.simpleicons.org/css3" alt="CSS" title="CSS"/>
+	<img width="32" src="https://cdn.simpleicons.org/css" alt="CSS" title="CSS"/>
 	<img width="32" src="https://cdn.simpleicons.org/javascript" alt="JavaScript" title="JavaScript"/>
 	<img width="32" src="https://cdn.simpleicons.org/typescript" alt="TypeScript" title="TypeScript"/>
   	<img width="32" src="https://cdn.simpleicons.org/php" alt="php" title="php"/>

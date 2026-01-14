@@ -89,8 +89,8 @@ Let's connect! Feel free to reach out to me for collaborations, project inquirie
 
 ## Checkout
 [![My Portfolio](https://img.shields.io/badge/my_portfolio-fbbf24?style=for-the-badge&link=https%3A%2F%2Fwww.alpsariyer.dev)](https://www.alpsariyer.dev)
-[![Linkedin](https://camo.githubusercontent.com/05a93bdb893b4febd59cb728f7284c9f3cd50528eca63bdc6d57627fe244ca5e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c696e6b6564696e2d2532333145373742352e7376673f267374796c653d666f722d7468652d6261646765266c6f676f3d6c696e6b6564696e266c6f676f436f6c6f723d7768697465)](https://www.linkedin.com/in/ravenwits/)
+[![Linkedin](https://img.shields.io/badge/LINKEDIN-0a66c2?style=for-the-badge)](https://www.linkedin.com/in/ravenwits/)
 [![GitLab](https://img.shields.io/badge/GitLab-Contributions-orange?style=for-the-badge&logo=gitlab&logoColor=orange)](https://gitlab.dannie.com.tr/Alp)
 
 
-[![My GitHub Stats](https://github-readme-stats.vercel.app/api/?username=ravenwits&count_private=true&theme=github_dark&showicons=true)]()
+![Stats](./profile/stats.svg)

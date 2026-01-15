@@ -2,24 +2,26 @@
 
 [![Typing SVG](https://readme-typing-svg.demolab.com/?lines=my+name+is+Alp;I+am+from+Turkey!)](https://git.io/typing-svg)
 
-I am a passionate content creator evolved to a **self-taught** designer and programmer hailing from the enchanting lands of Turkey 🇹🇷. With over a decade of experience in the video game industry, I've had the incredible opportunity to collaborate with diverse companies and talented individuals from all corners of the world!
+I’m a software engineer based in Vilnius, Lithuania with a strong background in product driven development and business focused problem solving. I began my career as a content creator and self taught designer, which gave me a solid foundation in user experience, visual communication, and audience driven thinking.
 
-My journey began with an insatiable curiosity for digital arts even before stepping into college. Fast forward to today, I can recreate anything you've ever seen on TV or the vast expanse of the internet. But my quest for knowledge doesn't stop there. I am continuously honing my skills in various domains, including code writing, programming, game design, 3D modeling, social media content & marketing, digital advertisement, 3D animations, graphic & printed design, UI/UX design, VFX, videography & photography, and much more.
+With over a decade of experience in the video game industry, I’ve worked with distributed teams and international companies, contributing to products used by diverse global audiences. This background shaped how I approach engineering: building solutions that balance technical quality, usability, and real business impact.
 
-Presently, I thrive in mostly on the web development, passionately crafting and developing projects that (I hope captivate and engage audiences). As an avid learner, I try always to ascend the staircase of learning new skills, seeking to push the boundaries of myself through trying to stay creative.
+Today, I primarily work in web development, designing and implementing scalable, maintainable systems with a strong emphasis on product quality, performance, and developer experience. I value collaboration, clear communication, and ownership, and I’m comfortable operating close to product and business stakeholders.
 
-I firmly believe in the power of collaboration, and I'm open to exciting business opportunities and ventures. If you're seeking a creative mind who can blend artistry with technical expertise to bring your projects to life, don't hesitate to get in touch with me!
+I’m open to roles and opportunities where engineering, product thinking, and business goals intersect.
 
 Let's connect! Feel free to reach out to me for collaborations, project inquiries, or just a chat about our shared passions.
 
-- 🔭 I’m currently working on a personal push to my limits project to learn futher and go deeper! Rust is way to go!
-- 🌱 I’m currently mastering in typescript and using it with node.js and learning [React Native](https://github.com/facebook/react-native) for mobile development.  
-- 💬 Ask me about anything related to web development, I love discussing about new ideas.
+- 💼 Software Engineer (Web / Full Stack)
+- 🧠 Strong product & business mindset
+- 🎮 8+ years in web industry
+- 🌍 Experience with global and remote teams
+- 🔭 I’m currently working on a personal push to my limits project to learn futher and go deeper! Golang is way to go!
+- 💬 Ask me about anything related to web development or LLMs in general, I love discussing about new ideas.
 - 📫 How to reach me: [LinkedIn](https://www.linkedin.com/in/ravenwits/) or [Email](mailto:hi@alpsariyer.dev)
-- ⚡ Fun fact: I've started learned coding at 28 and it became my whole life. I am late because of
+- ⚡ Fun fact: I've started learned coding at 27 and it became my whole life. I am late because of
   	<img width="20" src="https://cdn.simpleicons.org/dungeonsanddragons" alt="DnD" title="DnD" />
   
-
 ## Tech I Use
 <div>
 	<img width="32" src="https://cdn.simpleicons.org/html5" alt="HTML" title="HTML"/>
@@ -91,6 +93,7 @@ Let's connect! Feel free to reach out to me for collaborations, project inquirie
 [![My Portfolio](https://img.shields.io/badge/my_portfolio-fbbf24?style=for-the-badge&link=https%3A%2F%2Fwww.alpsariyer.dev)](https://www.alpsariyer.dev)
 [![Linkedin](https://img.shields.io/badge/LINKEDIN-0a66c2?style=for-the-badge)](https://www.linkedin.com/in/ravenwits/)
 [![GitLab](https://img.shields.io/badge/GitLab-Contributions-orange?style=for-the-badge&logo=gitlab&logoColor=orange)](https://gitlab.dannie.com.tr/Alp)
+![Views](https://komarev.com/ghpvc/?username=RavenWits&color=blue&style=for-the-badge)
 
 
 ![Stats](./profile/stats.svg)

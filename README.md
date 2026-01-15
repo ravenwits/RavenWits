@@ -14,9 +14,9 @@ Let's connect! Feel free to reach out to me for collaborations, project inquirie
 
 - 💼 Software Engineer (Web / Full Stack)
 - 🧠 Strong product & business mindset
-- 🎮 8+ years in web industry
+- 🌐 8+ years in web industry
 - 🌍 Experience with global and remote teams
-- 🔭 I’m currently working on a personal push to my limits project to learn futher and go deeper! Golang is way to go!
+- 🔭 I’m currently working on a personal project to push my limits to learn futher and go deeper! Golang is way to go!
 - 💬 Ask me about anything related to web development or LLMs in general, I love discussing about new ideas.
 - 📫 How to reach me: [LinkedIn](https://www.linkedin.com/in/ravenwits/) or [Email](mailto:hi@alpsariyer.dev)
 - ⚡ Fun fact: I've started learned coding at 27 and it became my whole life. I am late because of

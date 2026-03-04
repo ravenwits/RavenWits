@@ -21,30 +21,29 @@ Let's connect! Feel free to reach out to me for collaborations, project inquirie
 - 📫 How to reach me: [LinkedIn](https://www.linkedin.com/in/ravenwits/) or [Email](mailto:hi@alpsariyer.dev)
 - ⚡ Fun fact: I've started learned coding at 27 and it became my whole life. I am late because of
   	<img width="20" src="https://cdn.simpleicons.org/dungeonsanddragons" alt="DnD" title="DnD" />
-  
-## Tech I Use
-<div>
+
+
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+  <td valign="top>
 	<img width="48" src="https://cdn.simpleicons.org/html5" alt="HTML" title="HTML"/>
 	<img width="48" src="https://cdn.simpleicons.org/css" alt="CSS" title="CSS"/>
 	<img width="48" src="https://cdn.simpleicons.org/javascript" alt="JavaScript" title="JavaScript"/>
 	<img width="48" src="https://cdn.simpleicons.org/typescript" alt="TypeScript" title="TypeScript"/>
   	<img width="48" src="https://cdn.simpleicons.org/php" alt="php" title="php"/>
 	<img width="48" src="https://cdn.simpleicons.org/git" alt="Git" title="Git"/>
-</div>
-<div>
-  	<img width="48" src="https://cdn.simpleicons.org/react" alt="React" title="React"/>
+    </br>
+	<img width="48" src="https://cdn.simpleicons.org/react" alt="React" title="React"/>
   	<img width="48" src="https://cdn.simpleicons.org/nextdotjs" alt="NextJS" title="NextJS"/>
   	<img width="48" src="https://cdn.simpleicons.org/nestjs" alt="Nestjs" title="NestJS"/>
 	<img width="48" src="https://cdn.simpleicons.org/firebase" alt="Firebase" title="Firebase"/>
 	<img width="48" src="https://cdn.simpleicons.org/supabase" alt="Supabse" title="Supabase"/>
 	<img width="48" src="https://cdn.simpleicons.org/wordpress" alt="Wordpress" title="Wordpress"/>
   	<img width="48" src="https://cdn.simpleicons.org/jquery" alt="jquery" title="jquery"/>
-</div>
-<div>
+  	</br>
   	<img width="48" src="https://cdn.simpleicons.org/recoil" alt="Recoil" title="Recoil"/>
 	<img width="48" src="https://cdn.simpleicons.org/redux" alt="Redux" title="Redux"/>
-</div>
-<div>
+	</br>
 	<img width="48" src="https://cdn.simpleicons.org/graphql" alt="GraphQL" title="GraphQL"/>
   	<img width="48" src="https://cdn.simpleicons.org/prisma" alt="prisma" title="prisma"/>
   	<img width="48" src="https://cdn.simpleicons.org/drizzle" alt="Drizzle" title="Drizzle"/>
@@ -52,8 +51,7 @@ Let's connect! Feel free to reach out to me for collaborations, project inquirie
   	<img width="48" src="https://cdn.simpleicons.org/mongodb" alt="mongoDB" title="mongoDB"/>
 	<img width="48" src="https://cdn.simpleicons.org/postgresql" alt="PostgreSQL" title="PostgreSQL"/>
 	<img width="48" src="https://cdn.simpleicons.org/mysql" alt="MySQL" title="MySQL"/>
-</div>
-<div>
+	</br>
 	<img width="48" src="https://cdn.simpleicons.org/tsnode" alt="ts-node" title="ts node"/>
    	<img width="48" src="https://cdn.simpleicons.org/node.js" alt="Node.js" title="Node.js"/>
 	<img width="48" src="https://cdn.simpleicons.org/express" alt="Express" title="Express"/>
@@ -61,39 +59,40 @@ Let's connect! Feel free to reach out to me for collaborations, project inquirie
   	<img width="48" src="https://cdn.simpleicons.org/trpc/2596BE" alt="trpc" title="trpc"/>
   	<img width="48" src="https://cdn.simpleicons.org/axios/5A29E4" alt="axios" title="axios"/>
 	<img width="48" src="https://cdn.simpleicons.org/socket.io" alt="Socket IO" title="Socket IO"/>
-</div>
-<div>
-  	<img width="48" src="https://cdn.simpleicons.org/jss" alt="JSS" title="JSS"/>
+	</br>
+	<img width="48" src="https://cdn.simpleicons.org/jss" alt="JSS" title="JSS"/>
   	<img width="48" src="https://cdn.simpleicons.org/framer" alt="Framer" title="Framer"/>
 	<img width="48" src="https://cdn.simpleicons.org/tailwindcss" alt="Tailwind CSS" title="Tailwind CSS"/>
 	<img width="48" src="https://cdn.simpleicons.org/bootstrap" alt="Bootstrap" title="Bootstrap"/>
 	<img width="48" src="https://cdn.simpleicons.org/sass" alt="Sass" title="Sass"/>
 	<img width="48" src="https://cdn.simpleicons.org/shadcnui" alt="Shadcn" title="Shadcn"/>
-</div>
-<div>	
-  	<img width="48" src="https://cdn.simpleicons.org/openai" alt="openai" title="openai"/>
+	</br>
   	<img width="48" src="https://cdn.simpleicons.org/postman" alt="postman" title="postman"/>
 	<img width="48" src="https://cdn.simpleicons.org/unrealengine" alt="Unreal Engine" title="Unreal Engine"/>
   	<img width="48" src="https://cdn.simpleicons.org/figma" alt="Figma" title="Figma"/>
   	<img width="48" src="https://cdn.simpleicons.org/neovim" alt="Neovim" title="Neovim"/>
   	<img width="48" src="https://cdn.simpleicons.org/googlecloud" alt="GCP" title="GCP"/>
-</div>
-<div>
-  	<img width="48" src="https://cdn.simpleicons.org/github" alt="GitHub" title="GitHub"/>
+	</br>
+	<img width="48" src="https://cdn.simpleicons.org/nginx" alt="nginx" title="nginx"/>
+	<img width="48" src="https://cdn.simpleicons.org/caddy" alt="caddy" title="caddy"/>
+	<img width="48" src="https://cdn.simpleicons.org/github" alt="GitHub" title="GitHub"/>
 	<img width="48" src="https://cdn.simpleicons.org/gitlab" alt="GitLab" title="GitLab"/>
   	<img width="48" src="https://cdn.simpleicons.org/docker" alt="Docker" title="Docker"/>
-</div>
-<div>
-  	<img width="48" src="https://cdn.simpleicons.org/archlinux" alt="Arch" title="I use Arch btw :)"/>
-</div>
-
+  </td>
+  <td valign="top">
+    <img src="./profile/top-langs.svg" width="300"/>
+  </td>
+</tr>
+</table>
 
 
 ## Checkout
-[![My Portfolio](https://img.shields.io/badge/my_portfolio-fbbf24?style=for-the-badge&link=https%3A%2F%2Fwww.alpsariyer.dev)](https://www.alpsariyer.dev)
-[![Linkedin](https://img.shields.io/badge/LINKEDIN-0a66c2?style=for-the-badge)](https://www.linkedin.com/in/ravenwits/)
-[![GitLab](https://img.shields.io/badge/GitLab-Contributions-orange?style=for-the-badge&logo=gitlab&logoColor=orange)](https://gitlab.dannie.com.tr/Alp)
+[![My Portfolio](https://img.shields.io/badge/my_portfolio-f9e2af?style=for-the-badge&link=https%3A%2F%2Fwww.alpsariyer.dev)](https://www.alpsariyer.dev)
+[![My Resume](https://img.shields.io/badge/my_resume-f38ba8?style=for-the-badge&link=https%3A%2F%2Fresume.alpsariyer.dev)](https://resume.alpsariyer.dev)
+[![Linkedin](https://img.shields.io/badge/LINKEDIN-89b4fa?style=for-the-badge)](https://www.linkedin.com/in/ravenwits/)
+[![GitLab](https://img.shields.io/badge/GitLab-Contributions-fab387?style=for-the-badge&logo=gitlab&logoColor=orange)](https://gitlab.dannie.com.tr/Alp)
 ![Views](https://komarev.com/ghpvc/?username=RavenWits&color=blue&style=for-the-badge)
 
 
 ![Stats](./profile/stats.svg)
+

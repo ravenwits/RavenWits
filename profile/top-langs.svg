@@ -13,7 +13,7 @@
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
-            fill: #2f80ed;
+            fill: #94e2d5;
             animation: fadeInAnimation 0.8s ease-in-out forwards;
           }
           @supports(-moz-appearance: auto) {
@@ -38,7 +38,7 @@
       }
     }
     .stat {
-      font: 600 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #434d58;
+      font: 600 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #cdd6f4;
     }
     @supports(-moz-appearance: auto) {
       /* Selector detects Firefox */
@@ -47,7 +47,7 @@
     .bold { font-weight: 700 }
     .lang-name {
       font: 400 11px "Segoe UI", Ubuntu, Sans-Serif;
-      fill: #434d58;
+      fill: #cdd6f4;
     }
     .stagger {
       opacity: 0;
@@ -93,7 +93,7 @@
           height="99%"
           stroke="#e4e2e2"
           width="299"
-          fill="#fffefe"
+          fill="#1e1e2e"
           stroke-opacity="1"
         />
 
@@ -120,59 +120,95 @@
           
     <svg data-testid="lang-items">
       <g transform="translate(0, 0)">
-        <svg data-testid="pie">
+        <svg data-testid="donut">
           
       <g class="stagger" style="animation-delay: 100ms">
-        <path
-          data-testid="lang-pie"
+        <circle 
+          cx="150"
+          cy="100"
+          r="80"
+          fill="transparent"
+          stroke="#178600"
+          stroke-width="25"
+          stroke-dasharray="502.6548245743669"
+          stroke-dashoffset="0"
           size="38.422486633395586"
-          d="M 150 100 L 240 100 A 90 90 0 0 1 82.78067460066555 159.8461552053128 Z"
-          fill="#178600"
+          data-testid="lang-donut"
         />
       </g>
     
       <g class="stagger" style="animation-delay: 200ms">
-        <path
-          data-testid="lang-pie"
+        <circle 
+          cx="150"
+          cy="100"
+          r="80"
+          fill="transparent"
+          stroke="#f1e05a"
+          stroke-width="25"
+          stroke-dasharray="502.6548245743669"
+          stroke-dashoffset="193.13248278420414"
           size="19.40558452976882"
-          d="M 150 100 L 82.78067460066555 159.8461552053128 A 90 90 0 0 1 70.66863201751593 57.49665831928386 Z"
-          fill="#f1e05a"
+          data-testid="lang-donut"
         />
       </g>
     
       <g class="stagger" style="animation-delay: 300ms">
-        <path
-          data-testid="lang-pie"
+        <circle 
+          cx="150"
+          cy="100"
+          r="80"
+          fill="transparent"
+          stroke="#4F5D95"
+          stroke-width="25"
+          stroke-dasharray="502.6548245743669"
+          stroke-dashoffset="290.6755896599441"
           size="14.093231079572243"
-          d="M 150 100 L 70.66863201751593 57.49665831928386 A 90 90 0 0 1 132.69874692639576 11.678617299755217 Z"
-          fill="#4F5D95"
+          data-testid="lang-donut"
         />
       </g>
     
       <g class="stagger" style="animation-delay: 400ms">
-        <path
-          data-testid="lang-pie"
+        <circle 
+          cx="150"
+          cy="100"
+          r="80"
+          fill="transparent"
+          stroke="#663399"
+          stroke-width="25"
+          stroke-dasharray="502.6548245743669"
+          stroke-dashoffset="361.5158956198281"
           size="13.35061214030406"
-          d="M 150 100 L 132.69874692639576 11.678617299755217 A 90 90 0 0 1 204.1368682777677 28.102854764075445 Z"
-          fill="#663399"
+          data-testid="lang-donut"
         />
       </g>
     
       <g class="stagger" style="animation-delay: 500ms">
-        <path
-          data-testid="lang-pie"
+        <circle 
+          cx="150"
+          cy="100"
+          r="80"
+          fill="transparent"
+          stroke="#3178c6"
+          stroke-width="25"
+          stroke-dasharray="502.6548245743669"
+          stroke-dashoffset="428.6233916532776"
           size="8.460479916483575"
-          d="M 150 100 L 204.1368682777677 28.102854764075445 A 90 90 0 0 1 233.11100790465616 65.46653268100371 Z"
-          fill="#3178c6"
+          data-testid="lang-donut"
         />
       </g>
     
       <g class="stagger" style="animation-delay: 600ms">
-        <path
-          data-testid="lang-pie"
+        <circle 
+          cx="150"
+          cy="100"
+          r="80"
+          fill="transparent"
+          stroke="#222c37"
+          stroke-width="25"
+          stroke-dasharray="502.6548245743669"
+          stroke-dashoffset="471.1504021356277"
           size="6.2676057004757135"
-          d="M 150 100 L 233.11100790465616 65.46653268100371 A 90 90 0 0 1 240 99.9999999999999 Z"
-          fill="#222c37"
+          data-testid="lang-donut"
         />
       </g>
     

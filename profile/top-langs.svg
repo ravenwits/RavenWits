@@ -132,7 +132,7 @@
           stroke-width="25"
           stroke-dasharray="502.6548245743669"
           stroke-dashoffset="0"
-          size="38.422486633395586"
+          size="38.42026172160921"
           data-testid="lang-donut"
         />
       </g>
@@ -146,8 +146,8 @@
           stroke="#f1e05a"
           stroke-width="25"
           stroke-dasharray="502.6548245743669"
-          stroke-dashoffset="193.13248278420414"
-          size="19.40558452976882"
+          stroke-dashoffset="193.1212991577674"
+          size="19.409754452765416"
           data-testid="lang-donut"
         />
       </g>
@@ -161,8 +161,8 @@
           stroke="#4F5D95"
           stroke-width="25"
           stroke-dasharray="502.6548245743669"
-          stroke-dashoffset="290.6755896599441"
-          size="14.093231079572243"
+          stroke-dashoffset="290.68536635263075"
+          size="14.092414989863206"
           data-testid="lang-donut"
         />
       </g>
@@ -176,8 +176,8 @@
           stroke="#663399"
           stroke-width="25"
           stroke-dasharray="502.6548245743669"
-          stroke-dashoffset="361.5158956198281"
-          size="13.35061214030406"
+          stroke-dashoffset="361.5215701982194"
+          size="13.350612191638017"
           data-testid="lang-donut"
         />
       </g>
@@ -191,8 +191,8 @@
           stroke="#3178c6"
           stroke-width="25"
           stroke-dasharray="502.6548245743669"
-          stroke-dashoffset="428.6233916532776"
-          size="8.460479916483575"
+          stroke-dashoffset="428.62906648970153"
+          size="8.459713878768401"
           data-testid="lang-donut"
         />
       </g>
@@ -206,8 +206,8 @@
           stroke="#222c37"
           stroke-width="25"
           stroke-dasharray="502.6548245743669"
-          stroke-dashoffset="471.1504021356277"
-          size="6.2676057004757135"
+          stroke-dashoffset="471.15222644651817"
+          size="6.267242765355754"
           data-testid="lang-donut"
         />
       </g>

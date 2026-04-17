@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Alp Sar&#305;yer's GitHub Stats, Rank: B</title>
-        <desc id="descId">Total Stars Earned: 63, Total Commits  : 307, Total PRs: 59, Total Issues: 12, Contributed to (last year): 13</desc>
+        <desc id="descId">Total Stars Earned: 63, Total Commits  : 307, Total PRs: 63, Total Issues: 12, Contributed to (last year): 13</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 142.6743987704665;
+        stroke-dashoffset: 141.17852701375978;
       }
     }
   
@@ -192,7 +192,7 @@
         x="219.01"
         y="12.5"
         data-testid="prs"
-      >59</text>
+      >63</text>
     </g>
   </g><g transform="translate(0, 75)">
     <g class="stagger" style="animation-delay: 900ms" transform="translate(25, 0)">

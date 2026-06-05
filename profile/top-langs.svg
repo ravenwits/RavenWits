@@ -132,7 +132,7 @@
           stroke-width="25"
           stroke-dasharray="502.6548245743669"
           stroke-dashoffset="0"
-          size="28.437081426893347"
+          size="28.43685971722249"
           data-testid="lang-donut"
         />
       </g>
@@ -146,8 +146,8 @@
           stroke="#178600"
           stroke-width="25"
           stroke-dasharray="502.6548245743669"
-          stroke-dashoffset="142.94036176042061"
-          size="26.090721816730323"
+          stroke-dashoffset="142.9392473260635"
+          size="26.09051840044932"
           data-testid="lang-donut"
         />
       </g>
@@ -161,8 +161,8 @@
           stroke="#3178c6"
           stroke-width="25"
           stroke-dasharray="502.6548245743669"
-          stroke-dashoffset="274.0866337384925"
-          size="13.988167371443167"
+          stroke-dashoffset="274.08449682238495"
+          size="13.98883796259195"
           data-testid="lang-donut"
         />
       </g>
@@ -176,8 +176,8 @@
           stroke="#4F5D95"
           stroke-width="25"
           stroke-dasharray="502.6548245743669"
-          stroke-dashoffset="344.39883190058896"
-          size="13.391333239424775"
+          stroke-dashoffset="344.40006574324394"
+          size="13.391228833911411"
           data-testid="lang-donut"
         />
       </g>
@@ -191,8 +191,8 @@
           stroke="#663399"
           stroke-width="25"
           stroke-dasharray="502.6548245743669"
-          stroke-dashoffset="411.71101450338847"
-          size="12.788126919293688"
+          stroke-dashoffset="411.7117235466934"
+          size="12.78802721667767"
           data-testid="lang-donut"
         />
       </g>
@@ -206,8 +206,8 @@
           stroke="#222c37"
           stroke-width="25"
           stroke-dasharray="502.6548245743669"
-          stroke-dashoffset="475.99115143591155"
-          size="5.304569226214702"
+          stroke-dashoffset="475.9913593192068"
+          size="5.3045278691471625"
           data-testid="lang-donut"
         />
       </g>

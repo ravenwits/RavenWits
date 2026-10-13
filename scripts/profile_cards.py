@@ -113,20 +113,19 @@ def donut(parts, cx, cy, radius, thickness=17):
     return result
 
 
-# Same rank formula as readme-tools/github-readme-stats/src/calculateRank.js.
-# Commit, PR, issue and review inputs use the same rolling year as the card.
+# Adapted from readme-tools/github-readme-stats/src/calculateRank.js.
+# Rank uses annual commits and PRs, owned-repository stars and followers.
+# Issues and reviews are excluded; the remaining weights sum to 10.
 def calculate_rank(collection, stars, followers):
     exp = lambda value: 1 - 2 ** (-value)
     log = lambda value: value / (1 + value)
     weighted = (
         2 * exp(collection['totalCommitContributions'] / 250)
         + 3 * exp(collection['totalPullRequestContributions'] / 50)
-        + exp(collection['totalIssueContributions'] / 25)
-        + exp(collection['totalPullRequestReviewContributions'] / 2)
         + 4 * log(stars / 50)
         + log(followers / 10)
     )
-    percentile = max(0, min(100, 100 * (1 - weighted / 12)))
+    percentile = max(0, min(100, 100 * (1 - weighted / 10)))
     levels = [(1, 'S'), (12.5, 'A+'), (25, 'A'), (37.5, 'A-'),
               (50, 'B+'), (62.5, 'B'), (75, 'B-'), (87.5, 'C+'), (100, 'C')]
     return next(level for threshold, level in levels if percentile <= threshold), percentile
@@ -182,7 +181,7 @@ def render(collection, repositories, stars=0, followers=0):
     body += text(25, 299, f'{start} to {end} · updated daily', 11, '#a6adc8')
     stats = card("Alp Sarıyer's GitHub Stats",
                  f'{total} contributions from {start} to {end}. Includes private activity. '
-                 f'GitHub Readme Stats rank: {level}.', body)
+                 f'Activity rank: {level}.', body)
 
     totals, colors = language_totals(repositories)
     denominator = sum(totals.values())

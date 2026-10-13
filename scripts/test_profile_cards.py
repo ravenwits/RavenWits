@@ -62,9 +62,14 @@ class ProfileCardsTest(unittest.TestCase):
         annual = dict(empty, totalCommitContributions=3367, totalIssueContributions=2,
                       totalPullRequestContributions=261, totalPullRequestReviewContributions=4)
         grade, percentile = calculate_rank(annual, 65, 26)
-        self.assertEqual(grade, 'A-')
-        self.assertGreater(percentile, 25)
-        self.assertLessEqual(percentile, 37.5)
+        self.assertEqual(grade, 'A')
+        self.assertGreater(percentile, 12.5)
+        self.assertLessEqual(percentile, 25)
+
+    def test_issues_and_reviews_do_not_affect_rank(self):
+        without = dict(self.collection, totalIssueContributions=0, totalPullRequestReviewContributions=0)
+        with_activity = dict(self.collection, totalIssueContributions=100000, totalPullRequestReviewContributions=100000)
+        self.assertEqual(calculate_rank(without, 65, 26), calculate_rank(with_activity, 65, 26))
 
     def test_hidden_rows_and_rank_do_not_repeat_the_total(self):
         stats, _, _ = render(self.collection, [repo('org')], 65, 26)

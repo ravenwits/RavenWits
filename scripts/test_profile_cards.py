@@ -1,6 +1,6 @@
 import unittest
 from xml.etree import ElementTree
-from profile_cards import collect, render
+from profile_cards import calculate_rank, collect, render
 
 
 def repo(identity, owner='Organization', size=100, name='TypeScript'):
@@ -54,6 +54,23 @@ class ProfileCardsTest(unittest.TestCase):
         repository['languages']['totalCount'] = 2
         with self.assertRaises(RuntimeError):
             render(self.collection, [repository])
+
+    def test_rank_uses_readme_stats_thresholds(self):
+        empty = dict(self.collection, totalCommitContributions=0, totalIssueContributions=0,
+                     totalPullRequestContributions=0, totalPullRequestReviewContributions=0)
+        self.assertEqual(calculate_rank(empty, 0, 0), ('C', 100))
+        annual = dict(empty, totalCommitContributions=3367, totalIssueContributions=2,
+                      totalPullRequestContributions=261, totalPullRequestReviewContributions=4)
+        grade, percentile = calculate_rank(annual, 65, 26)
+        self.assertEqual(grade, 'A-')
+        self.assertGreater(percentile, 25)
+        self.assertLessEqual(percentile, 37.5)
+
+    def test_hidden_rows_and_rank_do_not_repeat_the_total(self):
+        stats, _, _ = render(self.collection, [repo('org')], 65, 26)
+        self.assertNotIn('>Issues<', stats)
+        self.assertNotIn('Other contributions', stats)
+        self.assertEqual(stats.count('>3,640</text>'), 1)
 
     def test_repeated_cursor_fails(self):
         def request(login, cursor):

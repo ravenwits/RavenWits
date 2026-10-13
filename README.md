@@ -67,11 +67,11 @@ Today, I primarily work in web development, designing and implementing scalable,
 ### GitHub Activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/ravenwits/RavenWits/main/profile/top-langs.svg?v=donut-2" width="49%" alt="Languages in personal and organization repositories" />
-  <img src="https://raw.githubusercontent.com/ravenwits/RavenWits/main/profile/stats.svg?v=donut-2" width="49%" alt="GitHub contributions in the last 12 months, including private activity" />
+  <img src="https://raw.githubusercontent.com/ravenwits/RavenWits/main/profile/top-langs.svg?v=rank-3" width="49%" alt="Languages in personal and organization repositories" />
+  <img src="https://raw.githubusercontent.com/ravenwits/RavenWits/main/profile/stats.svg?v=rank-3" width="49%" alt="GitHub contributions in the last 12 months, including private activity" />
 </div>
 
-<sub>Updated daily. Includes public and private contributions. Language percentages show the code distribution of repositories I contributed to, including organization repositories and forks, rather than how much code I personally wrote. Only accessible repositories are included.</sub>
+<sub>Includes contributions from the last 12 months across personal and organization repositories.</sub>
 
 ---
 

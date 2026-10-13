@@ -29,8 +29,8 @@ QUERY = '''query($login: String!, $after: String) {
 }'''
 
 
-def graphql(login, after=None):
-    payload = {'query': QUERY, 'variables': {'login': login, 'after': after}}
+def graphql(login, after=None, query=QUERY):
+    payload = {'query': query, 'variables': {'login': login, 'after': after}}
     result = subprocess.run(
         ['gh', 'api', 'graphql', '--input', '-'], input=json.dumps(payload),
         text=True, capture_output=True, check=True,
@@ -113,7 +113,51 @@ def donut(parts, cx, cy, radius, thickness=17):
     return result
 
 
-def render(collection, repositories):
+# Same rank formula as readme-tools/github-readme-stats/src/calculateRank.js.
+# Commit, PR, issue and review inputs use the same rolling year as the card.
+def calculate_rank(collection, stars, followers):
+    exp = lambda value: 1 - 2 ** (-value)
+    log = lambda value: value / (1 + value)
+    weighted = (
+        2 * exp(collection['totalCommitContributions'] / 250)
+        + 3 * exp(collection['totalPullRequestContributions'] / 50)
+        + exp(collection['totalIssueContributions'] / 25)
+        + exp(collection['totalPullRequestReviewContributions'] / 2)
+        + 4 * log(stars / 50)
+        + log(followers / 10)
+    )
+    percentile = max(0, min(100, 100 * (1 - weighted / 12)))
+    levels = [(1, 'S'), (12.5, 'A+'), (25, 'A'), (37.5, 'A-'),
+              (50, 'B+'), (62.5, 'B'), (75, 'B-'), (87.5, 'C+'), (100, 'C')]
+    return next(level for threshold, level in levels if percentile <= threshold), percentile
+
+
+def rank_profile(login):
+    query = '''query($login: String!, $after: String) {
+      user(login: $login) {
+        followers { totalCount }
+        repositories(first: 100, after: $after, ownerAffiliations: OWNER) {
+          nodes { stargazerCount }
+          pageInfo { hasNextPage endCursor }
+        }
+      }
+    }'''
+    stars = 0
+    after = None
+    seen = set()
+    while True:
+        user = graphql(login, after, query)
+        page = user['repositories']
+        stars += sum(repo['stargazerCount'] for repo in page['nodes'])
+        if not page['pageInfo']['hasNextPage']:
+            return stars, user['followers']['totalCount']
+        after = page['pageInfo']['endCursor']
+        if not after or after in seen:
+            raise RuntimeError('Star pagination did not advance')
+        seen.add(after)
+
+
+def render(collection, repositories, stars=0, followers=0):
     total = collection['contributionCalendar']['totalContributions']
     restricted = collection['restrictedContributionsCount']
     start = collection['startedAt'][:10]
@@ -122,28 +166,23 @@ def render(collection, repositories):
     prs = collection['totalPullRequestContributions']
     issues = collection['totalIssueContributions']
     reviews = collection['totalPullRequestReviewContributions']
-    other = max(0, total - commits - prs - issues - reviews - restricted)
     body = text(25, 59, 'Last 12 months · public & private', 12, '#a6adc8')
     rows = [('Total contributions', total), ('Commits', commits),
-            ('Pull requests', prs), ('Issues', issues), ('Code reviews', reviews)]
+            ('Pull requests', prs), ('Code reviews', reviews)]
     if restricted:
         rows.append(('Private activity', restricted))
-    if other:
-        rows.append(('Other contributions', other))
     for i, (label, count) in enumerate(rows):
         y = 98 + i * 27
         body += f'<circle cx="32" cy="{y-5}" r="4" fill="#cba6f7"/>'
         body += text(48, y, label, 14, weight=600)
         body += f'<text x="280" y="{y}" text-anchor="end" font-size="14" fill="#cdd6f4" font-weight="600">{count:,}</text>'
-    parts = [(commits, '#94e2d5'), (prs, '#cba6f7'), (issues, '#f9e2af'),
-             (reviews, '#89b4fa'), (restricted, '#f38ba8'), (other, '#a6adc8')]
-    body += donut(parts, 380, 158, 51, 9)
-    body += f'<text x="380" y="159" text-anchor="middle" font-size="24" fill="#cdd6f4" font-weight="700">{total:,}</text>'
-    body += '<text x="380" y="179" text-anchor="middle" font-size="10" fill="#a6adc8">contributions</text>'
+    level, percentile = calculate_rank(collection, stars, followers)
+    body += donut([(100 - percentile, '#94e2d5'), (percentile, '#313244')], 380, 158, 51, 9)
+    body += f'<text x="380" y="168" text-anchor="middle" font-size="30" fill="#cdd6f4" font-weight="700">{level}</text>'
     body += text(25, 299, f'{start} to {end} · updated daily', 11, '#a6adc8')
     stats = card("Alp Sarıyer's GitHub Stats",
                  f'{total} contributions from {start} to {end}. Includes private activity. '
-                 'The ring shows commits, pull requests, issues, reviews and other contributions.', body)
+                 f'GitHub Readme Stats rank: {level}.', body)
 
     totals, colors = language_totals(repositories)
     denominator = sum(totals.values())
@@ -172,7 +211,8 @@ def render(collection, repositories):
 def main():
     login = os.environ.get('PROFILE_USERNAME', 'ravenwits')
     collection, repositories = collect(login)
-    stats, languages, summary = render(collection, repositories)
+    stars, followers = rank_profile(login)
+    stats, languages, summary = render(collection, repositories, stars, followers)
     output = Path('profile')
     output.mkdir(exist_ok=True)
     (output / 'stats.svg').write_text(stats)

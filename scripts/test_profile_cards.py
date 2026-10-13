@@ -21,7 +21,7 @@ class ProfileCardsTest(unittest.TestCase):
         stats, _, summary = render(self.collection, [repo('org')])
         ElementTree.fromstring(stats)
         self.assertEqual(summary['contributions'], 3640)
-        self.assertIn('3,640 contributions', stats)
+        self.assertIn('>3,640</text>', stats)
         self.assertIn('3,500', stats)
         self.assertNotIn('7,140', stats)
 

@@ -1,5 +1,6 @@
 """Generate aggregate cards without publishing repository names or private metadata."""
 import json
+import math
 import os
 import subprocess
 from collections import defaultdict
@@ -82,14 +83,34 @@ def text(x, y, value, size=14, color='#cdd6f4', weight=400):
             f'font-weight="{weight}">{escape(str(value))}</text>')
 
 
-def card(title, description, body, height=300):
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="500" height="{height}" '
-            f'viewBox="0 0 500 {height}" role="img" aria-labelledby="title desc">'
+def card(title, description, body, height=320):
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="467" height="{height}" '
+            f'viewBox="0 0 467 {height}" role="img" aria-labelledby="title desc">'
             f'<title id="title">{escape(title)}</title><desc id="desc">{escape(description)}</desc>'
-            '<style>text{font-family:Segoe UI,Ubuntu,Arial,sans-serif}</style>'
-            f'<rect x=".5" y=".5" width="499" height="{height-1}" rx="8" '
-            'fill="#1e1e2e" stroke="#585b70"/>'
-            + text(24, 34, title, 19, '#94e2d5', 600) + body + '</svg>\n')
+            '<style>text{font-family:Segoe UI,Ubuntu,Arial,sans-serif;font-variant-numeric:tabular-nums}</style>'
+            f'<rect x=".5" y=".5" width="466" height="{height-1}" rx="4.5" '
+            'fill="#1e1e2e" stroke="#e4e2e2"/>'
+            + text(25, 35, title, 18, '#94e2d5', 600) + body + '</svg>\n')
+
+
+def donut(parts, cx, cy, radius, thickness=17):
+    """Render real proportions, including small slices and a complete single slice."""
+    total = sum(value for value, _ in parts)
+    result = f'<circle cx="{cx}" cy="{cy}" r="{radius}" fill="none" stroke="#313244" stroke-width="{thickness}"/>'
+    if not total:
+        return result
+    circumference = 2 * math.pi * radius
+    offset = 0
+    for value, color in parts:
+        if value <= 0:
+            continue
+        length = circumference * value / total
+        result += (f'<circle cx="{cx}" cy="{cy}" r="{radius}" fill="none" '
+                   f'stroke="{escape(color)}" stroke-width="{thickness}" '
+                   f'stroke-dasharray="{length:.6f} {circumference:.6f}" '
+                   f'stroke-dashoffset="{-offset:.6f}" transform="rotate(-90 {cx} {cy})"/>')
+        offset += length
+    return result
 
 
 def render(collection, repositories):
@@ -97,21 +118,32 @@ def render(collection, repositories):
     restricted = collection['restrictedContributionsCount']
     start = collection['startedAt'][:10]
     end = collection['endedAt'][:10]
-    body = text(24, 60, f'{start} to {end}', 12, '#a6adc8')
-    body += text(24, 106, f'{total:,} contributions', 29, '#cdd6f4', 600)
-    rows = [
-        ('Commits visible to the token', collection['totalCommitContributions']),
-        ('Pull requests visible to the token', collection['totalPullRequestContributions']),
-        ('Issues visible to the token', collection['totalIssueContributions']),
-        ('Reviews visible to the token', collection['totalPullRequestReviewContributions']),
-        ('Private contributions without details', restricted),
-    ]
+    commits = collection['totalCommitContributions']
+    prs = collection['totalPullRequestContributions']
+    issues = collection['totalIssueContributions']
+    reviews = collection['totalPullRequestReviewContributions']
+    other = max(0, total - commits - prs - issues - reviews - restricted)
+    body = text(25, 59, 'Last 12 months · public & private', 12, '#a6adc8')
+    rows = [('Total contributions', total), ('Commits', commits),
+            ('Pull requests', prs), ('Issues', issues), ('Code reviews', reviews)]
+    if restricted:
+        rows.append(('Private activity', restricted))
+    if other:
+        rows.append(('Other contributions', other))
     for i, (label, count) in enumerate(rows):
-        body += text(24, 142 + i * 25, label)
-        body += text(456, 142 + i * 25, f'{count:,}', weight=600)
-    body += text(24, 280, 'GitHub contribution calendar total, including private activity.', 12, '#a6adc8')
-    stats = card('GitHub contributions · last 12 months',
-                 f'{total} contributions from {start} to {end}. Includes private activity.', body)
+        y = 98 + i * 27
+        body += f'<circle cx="32" cy="{y-5}" r="4" fill="#cba6f7"/>'
+        body += text(48, y, label, 14, weight=600)
+        body += f'<text x="280" y="{y}" text-anchor="end" font-size="14" fill="#cdd6f4" font-weight="600">{count:,}</text>'
+    parts = [(commits, '#94e2d5'), (prs, '#cba6f7'), (issues, '#f9e2af'),
+             (reviews, '#89b4fa'), (restricted, '#f38ba8'), (other, '#a6adc8')]
+    body += donut(parts, 380, 158, 51, 9)
+    body += f'<text x="380" y="159" text-anchor="middle" font-size="24" fill="#cdd6f4" font-weight="700">{total:,}</text>'
+    body += '<text x="380" y="179" text-anchor="middle" font-size="10" fill="#a6adc8">contributions</text>'
+    body += text(25, 299, f'{start} to {end} · updated daily', 11, '#a6adc8')
+    stats = card("Alp Sarıyer's GitHub Stats",
+                 f'{total} contributions from {start} to {end}. Includes private activity. '
+                 'The ring shows commits, pull requests, issues, reviews and other contributions.', body)
 
     totals, colors = language_totals(repositories)
     denominator = sum(totals.values())
@@ -120,23 +152,19 @@ def render(collection, repositories):
     if len(ranked) > 6:
         shown.append(('Other', sum(size for _, size in ranked[6:])))
     org_count = sum(repo['owner']['__typename'] == 'Organization' for repo in repositories)
-    body = text(24, 60, 'Repositories contributed to in the last 12 months', 12, '#a6adc8')
+    body = text(25, 59, 'Personal & organization repositories · last 12 months', 12, '#a6adc8')
+    body += donut([(size, colors.get(name, '#a6adc8')) for name, size in shown], 233.5, 132, 53)
     for i, (name, size) in enumerate(shown):
-        y = 90 + i * 27
-        percent = size / denominator * 100
-        body += text(24, y, name)
-        body += text(407, y, f'{percent:.1f}%')
-        body += (f'<rect x="195" y="{y-10}" width="{max(1, percent*1.8):.2f}" '
-                 f'height="9" rx="3" fill="{escape(colors.get(name, "#a6adc8"))}"/>')
+        x = 32 + (i % 2) * 223
+        y = 211 + (i // 2) * 23
+        body += f'<circle cx="{x}" cy="{y-5}" r="6" fill="{escape(colors.get(name, "#a6adc8"))}"/>'
+        body += text(x + 13, y, f'{name} {size / denominator * 100:.1f}%', 14)
     if not denominator:
-        body += text(24, 100, 'No accessible repository language data.')
-    footer_y = max(135, 90 + len(shown) * 27)
-    body += text(24, footer_y, f'{len(repositories)} accessible repositories · {org_count} organization repositories', 12, '#a6adc8')
-    body += text(24, footer_y + 22, 'Share of repository code bytes, not code authored by me.', 12, '#a6adc8')
-    body += text(24, footer_y + 44, 'Private repositories require token access. Forks are included.', 12, '#a6adc8')
-    langs = card('Languages in contributed repositories',
+        body += text(25, 211, 'No language data available.')
+    body += text(25, 310, f'{len(repositories)} repositories · {org_count} organization repositories', 11, '#a6adc8')
+    langs = card('Most Used Languages',
                  'Language distribution by code bytes in accessible personal and organization repositories. '
-                 'Not a measure of personally authored code.', body, footer_y + 65)
+                 'Not a measure of personally authored code.', body)
     return stats, langs, {'contributions': total, 'repositories': len(repositories), 'organization_repositories': org_count,
                           'restricted_contributions': restricted}
 

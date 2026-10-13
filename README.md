@@ -66,12 +66,12 @@ Today, I primarily work in web development, designing and implementing scalable,
 
 ### GitHub Activity
 
-Updated daily. Contributions use GitHub's rolling 12-month calendar total, including private activity. Language percentages describe code bytes in accessible repositories I contributed to, including organization repositories and forks. They do not measure how much code I personally wrote. Private repository language data depends on the PAT's access.
-
 <div align="center">
-  <img src="./profile/top-langs.svg" width="460" alt="Languages in accessible personal and organization repositories contributed to during the last 12 months" />
-  <img src="./profile/stats.svg" width="460" alt="GitHub contributions during the last 12 months, including private activity" />
+  <img src="./profile/top-langs.svg" width="49%" alt="Languages in personal and organization repositories" />
+  <img src="./profile/stats.svg" width="49%" alt="GitHub contributions in the last 12 months, including private activity" />
 </div>
+
+<sub>Updated daily. Includes public and private contributions. Language percentages show the code distribution of repositories I contributed to, including organization repositories and forks, rather than how much code I personally wrote. Only accessible repositories are included.</sub>
 
 ---
 
